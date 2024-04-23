@@ -15,11 +15,7 @@ function TsSelectCWMSJS({ district, filter, onSelect, value }) {
         if (!data?.entries || data?.entries == 0) {
           throw Error(`No catalog timeseries returned`);
         }
-        console.log(data?.entries);
         setValues(data?.entries);
-        // Object.entries(data?.entries).forEach(([key, value]) => {
-        // console.log(value?.name);
-        // });
       });
   }, [district, filter]);
   return (
